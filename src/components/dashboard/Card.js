@@ -13,7 +13,7 @@ const Card = () => {
         </div>
       </div>
       <div className="card-footer">
-        <div className="card-stats">Card Stats</div>
+        <p className="card-stats">Card Stats</p>
       </div>
     </div>
   );

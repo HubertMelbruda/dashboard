@@ -12,13 +12,13 @@ import {
 
 const Sidebar = () => {
   const navLabels = [
-    { id: 1, name: "Dashboard", icon: [FaBuromobelexperte] },
-    { id: 2, name: "User Profile", icon: [FaHouseUser] },
-    { id: 3, name: "Portfolio", icon: [FaBtc] },
-    { id: 4, name: "News", icon: [FaYammer] },
-    { id: 5, name: "Assets", icon: [FaDeviantart] },
-    { id: 6, name: "Calender", icon: [FaMapMarkedAlt] },
-    { id: 7, name: "Notifications", icon: [FaRegStickyNote] },
+    { id: 1, name: "Dashboard", path: "dashboard", icon: [FaBuromobelexperte] },
+    { id: 2, name: "User Profile", path: "user-profile", icon: [FaHouseUser] },
+    { id: 3, name: "Portfolio", path: "portfolio", icon: [FaBtc] },
+    { id: 4, name: "News", path: "news", icon: [FaYammer] },
+    { id: 5, name: "Assets", path: "assets", icon: [FaDeviantart] },
+    { id: 6, name: "Calender", path: "calender", icon: [FaMapMarkedAlt] },
+    { id: 7, name: "Notifications", path: "notifications", icon: [FaRegStickyNote] },
   ];
 
   const navList = navLabels.map(label => {
@@ -27,6 +27,7 @@ const Sidebar = () => {
         key={label.id}
         id={label.id}
         name={label.name}
+        path={label.path}
         icon={label.icon[0]}
       />
     );

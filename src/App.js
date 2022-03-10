@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Navbar />
           <div className="content">
             <Routes>
-              <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/dashboard" element={<Dashboard />} />
+              <Route path="/user-profile" element={<UserProfile />} />
             </Routes>
           </div>
         </div>

@@ -3,7 +3,7 @@ import Charts from "../components/dashboard/Charts";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className="page-container">
       <div className="cards">
         <Card />
         <Card />

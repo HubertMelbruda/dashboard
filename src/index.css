@@ -20,6 +20,35 @@
   min-height: 100vh;
 }
 
+.column {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 10px
+}
+
+.col-100 {
+  flex: 0 0 100%;
+}
+
+.col-66 {
+  flex: 0 0 66,66%;
+}
+
+.col-33 {
+  flex: 0 0 33,33%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px; 
+}
+
+.grow {
+  flex-grow: 1;
+}
+
 /* ================ SIDE PANEL ===================== */
 
 .side-bar {
@@ -154,7 +183,6 @@
 .card {
   display: flex;
   flex-flow: column wrap;
-  flex-grow: 1;
   margin: 10px;
   background-color: var(--white);
   border-radius: 4px;
@@ -218,18 +246,9 @@
   width: 500px
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px; 
-}
 
-.column {
-  display: flex;
-  flex-flow: column wrap;
-  flex-grow: 1;
-  margin-right: 10px;
-}
+
+/* ================ User Form  ===================== */
 
 form label {
   display: inline-block;
@@ -249,4 +268,44 @@ form input {
 
 textarea {
   padding: 5px 10px;
+}
+
+/* ================ User Card  ===================== */
+
+.card-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.user-data {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 90px;
+  max-width: 350px
+}
+
+.user-data p {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.card-img {
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  top: 50%;   
+  left: 50%; 
+  transform: translate(-50%, -0%);
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border: 6px solid rgb(0, 195, 255);
+  border-radius: 40px;
 }

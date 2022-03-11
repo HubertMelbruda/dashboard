@@ -1,12 +1,12 @@
+import UserCard from "../components/userProfile/UserCard";
 import UserForm from "../components/userProfile/UserForm";
 
 const UserProfile = () => {
   return (
     <div className="page-container">
-      <div className="card">
-        <div className="row">
-          <h4><UserForm/></h4>
-        </div>
+      <div className="row">
+        <UserForm />
+        <UserCard />
       </div>
     </div>
   );

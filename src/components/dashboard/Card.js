@@ -2,7 +2,7 @@ import { FaBtc } from "react-icons/fa";
 
 const Card = () => {
   return (
-    <div className="card">
+    <div className="card grow">
       <div className="card-header">
         <p>Ethereum</p>
       </div>

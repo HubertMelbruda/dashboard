@@ -1,0 +1,21 @@
+.card-icon .icon {
+  width: 50px;
+  height: 50px;
+  padding: 0 10px;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-left: auto;
+
+  h4 {
+    font-size: $font-xl;
+    font-weight: 400;
+  }
+}
+
+.card-body img {
+  width: 500px
+}

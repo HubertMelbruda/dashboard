@@ -1,0 +1,45 @@
+// Colors 
+$primary: #F5F7FB;
+$secondary: #FFFFFF;
+$dark: #444444;
+
+// Font
+$font-s: 10px;
+$font-m: 15px;
+$font-l: 20px;
+$font-xl: 30px;
+
+// Spacing
+$padding-s: 5px;
+$padding-m: 10px;
+$padding-l: 15px;
+$padding-xl: 20px;
+
+$margin-s: 5px;
+$margin-m: 10px;
+$margin-l: 15px;
+$margin-xl: 20px;
+
+
+// Border
+$border-thickness: 1px;
+$border-radius: 4px;
+
+// element position 
+
+@mixin centerElement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerElementColumn($direction){
+  display: flex;
+  flex-direction: $direction;
+  
+  @if($direction == column) {
+    align-items: center;
+  } @else {
+    justify-content: center;
+  }
+}

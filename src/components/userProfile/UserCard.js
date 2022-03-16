@@ -22,7 +22,7 @@ const UserCard = () => {
                 accusantium ex!
               </p>
             </div>
-          </div>
+          </div> 
       </div>
     </div>
   );

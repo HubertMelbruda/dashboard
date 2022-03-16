@@ -1,0 +1,25 @@
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: $border-thickness solid $dark;
+
+  a {
+    display: flex;
+    justify-content: center;
+    font-size: $font-m;
+    font-weight: 500;
+    padding: 10px;
+    margin: 10px;
+    color: $dark;
+    background-color: $secondary;
+    border: $border-thickness solid $dark;
+    border-radius: $border-radius;
+  }
+}
+
+.nav-bar-left {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+}

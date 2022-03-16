@@ -34,7 +34,7 @@ const Sidebar = () => {
   });
 
   return (
-    <div className="sidebar">
+    <div className="side-panel">
       <div className="logo">
         <img src={reactLogo} alt="Logo" /> USER DASHBOARD
       </div>

@@ -1,0 +1,50 @@
+.side-panel {
+  background-color: $dark;
+  width: 260px;
+
+  .logo {
+    @include centerElement;
+    padding: 13px 15px;
+    color: $primary;
+    font-size: $font-l;
+    border-bottom: $border-thickness solid $primary;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  .navLinkList {
+    @include centerElementColumn(column);
+    padding: 10px;
+    margin: 5px;
+    border-radius: $border-radius;
+  }
+
+  .navLink {
+    display: flex;
+    align-items: center;
+    width: 210px;
+    padding: 10px 15px;
+    margin: 0 15px;
+    border-radius: $border-radius;
+
+    a {
+      margin-left: 10px;
+      color: $primary;
+      font-size: $font-l;
+      font-weight: 400;
+    }
+
+     .navIcon {
+      width: 25px;
+      height: 25px;
+      color: $primary;
+    }
+  }
+
+  .navLink:hover {
+    border: $border-thickness solid rgb(255, 255, 255);
+  }
+}

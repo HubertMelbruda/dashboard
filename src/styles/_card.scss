@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10px;
+  background-color: $secondary;
+  border-radius: $border-radius;
+  border: $border-thickness solid $dark;
+
+  .card-header {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 10px;
+    border-bottom: $border-thickness solid $dark;
+    font-size: $font-xl;
+    font-weight: 400;
+  }
+  
+  .card-body{
+    @include centerElement;
+    padding: 10px 15px;
+  }
+  
+  .card-footer {
+    @include centerElement;
+    padding: 5px;
+    margin: 0 10px;
+    border-top: $border-thickness solid $primary;
+  }
+}
+

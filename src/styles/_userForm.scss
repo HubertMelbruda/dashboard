@@ -1,0 +1,19 @@
+form label {
+  display: inline-block;
+  font-size: $font-l;
+  font-weight: 400;
+  color:rgb(93, 93, 93);
+  padding-bottom: 5px;
+}
+
+form input {
+  padding: 5px 10px;
+}
+
+::placeholder {
+  color:rgb(161, 161, 161)
+}
+
+textarea {
+  padding: 5px 10px;
+}

@@ -1,0 +1,42 @@
+// variables & functions
+@import "./variables";
+
+// base & layout
+@import './base';
+
+// components (button, card, navbar etc)
+@import './sidePanel';
+@import './card';
+@import './userCard';
+@import './navbar';
+@import './userForm';
+@import './priceCard';
+
+// utilities (margin, padding, opacity, etc)
+
+
+/* ================ Dashboard Cards ===================== */
+.page-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0 15px
+}
+
+.page-container .cards {
+  display: flex; 
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 5px;
+}
+
+.page-container .body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5px;
+}
+

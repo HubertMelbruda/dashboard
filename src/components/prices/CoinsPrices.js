@@ -1,18 +1,27 @@
 import useFetch from "../useFetch";
-import CoinsDetai from "./CoinsDetails";
+import CoinsDetails from "./CoinsDetails";
 
 const CoinPrices = () => {
-  const {
-    data: coins,
-    isLoading,
-    error,
-  } = useFetch(
+  const { data, isLoading, error } = useFetch(
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
   );
 
-  // const coinDetails = coins.map(coin => {
-  //   <CoinsDetai key={coin.symbol} id={coin.id} />;
-  // });
+  // console.log(data);
+
+  const coinDetails = data.map(coin => {
+    return (
+      <CoinsDetails
+        key={coin.id}
+        id={coin.market_cap_rank}
+        image={coin.image}
+        name={coin.name}
+        price={coin.current_price}
+        percentage24h={coin.price_change_percentage_24h}
+        volume24h={coin.total_volume}
+        marketCap={coin.market_cap}
+      />
+    );
+  });
 
   return (
     <div className="card grow">
@@ -20,10 +29,16 @@ const CoinPrices = () => {
         <p>Cryptocurrency Prices</p>
       </div>
       <div className="card-body">
-        <div className="table-head">
-          <div className="id">#</div>
-          <div className="coin-name">Coin</div>
-          <div className="price">Price</div>
+        <div className="table">
+          <div className="table-head">
+            <div className="id">#</div>
+            <div className="coin-name">Coin</div>
+            <div className="price">Price</div>
+            <div className="percentage-24h">24h</div>
+            <div className="volume-24h">24 h Volume</div>
+            <div className="market-cap">Market</div>
+          </div>
+          {data && <div>{coinDetails}</div>}
         </div>
       </div>
       <div className="card-footer">

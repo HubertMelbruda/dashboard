@@ -16,15 +16,6 @@ const UserForm = () => {
     e.preventDefault();
     console.log(form);
 
-    //   fetch("http://localhost:8000/users/", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(form),
-    //   }).then(() => {});
-    // };
-
-    // npx json-server --watch data/db.json --port 8000
-
     fetch("public/db.json/users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

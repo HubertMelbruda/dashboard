@@ -1,19 +1,25 @@
-form label {
-  display: inline-block;
-  font-size: $font-l;
-  font-weight: 400;
-  color: $font-color-dark;
-  padding-bottom: 5px;
-}
+.card-body {
+  label {
+    display: inline-block;
+    font-size: $font-l;
+    font-weight: 400;
+    color: $font-color-light;
+    padding-bottom: 5px;
+  }
 
-form input {
-  padding: 5px 10px;
-}
+  input {
+    padding: 5px 10px;
+  }
 
-::placeholder {
-  color:rgb(161, 161, 161)
-}
+  ::placeholder {
+    color:rgb(161, 161, 161)
+  }
 
-textarea {
-  padding: 5px 10px;
+  textarea {
+    padding: 5px 10px;
+  }
+
+  button {
+    @include button;
+  }
 }

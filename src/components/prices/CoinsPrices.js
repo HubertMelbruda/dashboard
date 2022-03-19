@@ -26,8 +26,9 @@ const CoinPrices = () => {
 
   return (
     <div className="card ">
-      <div className="card-header">
-        <p>Cryptocurrency Prices</p>
+      <div className="card-header table-prices">
+        <div>Cryptocurrency Prices</div>
+        <button className="refresh-btn">Refresh</button>
       </div>
       <div className="card-body">
         <div className="table">

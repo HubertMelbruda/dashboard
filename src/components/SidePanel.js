@@ -17,7 +17,7 @@ const Sidebar = () => {
     { id: 2, name: "User Profile", path: "user-profile", icon: [FaHouseUser] },
     { id: 3, name: "Portfolio", path: "portfolio", icon: [FaBtc] },
     { id: 4, name: "Prices", path: "prices", icon: [FaChartBar] },
-    { id: 5, name: "Assets", path: "assets", icon: [FaDeviantart] },
+    { id: 5, name: "Exchange", path: "exchange", icon: [FaDeviantart] },
     { id: 6, name: "Calender", path: "calender", icon: [FaMapMarkedAlt] },
     { id: 7, name: "Notes", path: "notifications", icon: [FaRegStickyNote] },
   ];

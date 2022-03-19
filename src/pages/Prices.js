@@ -1,6 +1,5 @@
 import CoinPrices from "../components/prices/CoinsPrices";
 
-
 const Prices = () => {
 
   return (

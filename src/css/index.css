@@ -73,10 +73,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  background-color: #F5F7FB;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  background-color: #0D1B2A;
 }
 
 .side-panel {
@@ -98,7 +98,7 @@ a {
   padding: 13px 15px;
   color: #F5F7FB;
   font-size: 20px;
-  border-bottom: 1px solid #F5F7FB;
+  border-bottom: 1px solid #0D1B2A;
 }
 
 .side-panel .logo img {
@@ -135,6 +135,10 @@ a {
   border-radius: 4px;
 }
 
+.side-panel .navLink:hover {
+  background-color: #415A77;
+}
+
 .side-panel .navLink a {
   margin-left: 10px;
   color: #F5F7FB;
@@ -161,16 +165,19 @@ a {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   margin: 10px;
-  background-color: #FFFFFF;
+  background-color: #1B263B;
   border-radius: 4px;
-  border: 1px solid #414141;
+  border: 1px solid #E0E1DD;
+  color: #F5F7FB;
 }
 
 .card .card-header {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 5px;
   margin: 0 10px;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #E0E1DD;
   font-size: 30px;
   font-weight: 400;
 }
@@ -200,7 +207,7 @@ a {
           align-items: center;
   padding: 5px;
   margin: 0 10px;
-  border-top: 1px solid #414141;
+  border-top: 1px solid #E0E1DD;
 }
 
 /* ================ User Card  ===================== */
@@ -226,7 +233,7 @@ a {
 .avatar img {
   width: 150px;
   height: 150px;
-  border: 6px solid #00c3ff;
+  border: 2px solid #E0E1DD;
   border-radius: 40px;
 }
 
@@ -258,7 +265,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #E0E1DD;
 }
 
 .nav-bar a {
@@ -272,10 +279,14 @@ a {
   font-weight: 500;
   padding: 10px;
   margin: 10px;
-  color: #414141;
-  background-color: #FFFFFF;
-  border: 1px solid #414141;
+  color: #F5F7FB;
+  background-color: #1B263B;
+  border: 1px solid #E0E1DD;
   border-radius: 4px;
+}
+
+.nav-bar a:hover {
+  background-color: #415A77;
 }
 
 .nav-bar-left {
@@ -288,45 +299,76 @@ a {
   margin-right: auto;
 }
 
-form label {
+.card-body label {
   display: inline-block;
   font-size: 20px;
   font-weight: 400;
-  color: #414141;
+  color: #F5F7FB;
   padding-bottom: 5px;
 }
 
-form input {
+.card-body input {
   padding: 5px 10px;
 }
 
-::-webkit-input-placeholder {
+.card-body ::-webkit-input-placeholder {
   color: #a1a1a1;
 }
 
-:-ms-input-placeholder {
+.card-body :-ms-input-placeholder {
   color: #a1a1a1;
 }
 
-::-ms-input-placeholder {
+.card-body ::-ms-input-placeholder {
   color: #a1a1a1;
 }
 
-::placeholder {
+.card-body ::placeholder {
   color: #a1a1a1;
 }
 
-textarea {
+.card-body textarea {
   padding: 5px 10px;
 }
 
-.card-icon .icon {
-  width: 50px;
-  height: 50px;
-  padding: 0 10px;
+.card-body button {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  min-width: 140px;
+  color: #F5F7FB;
+  cursor: pointer;
+  background-color: #1B263B;
+  border: 1px solid #E0E1DD;
+  border-radius: 4px;
 }
 
-.card-price {
+.card-body button:hover {
+  background-color: #415A77;
+}
+
+.card-body .chart img {
+  width: 500px;
+}
+
+.card-body .card-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-body .card-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-body .card-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,13 +379,34 @@ textarea {
   margin-left: auto;
 }
 
-.card-price h4 {
+.card-body .card-price h4 {
   font-size: 30px;
   font-weight: 400;
 }
 
-.card-body img {
-  width: 500px;
+.table-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table-prices .refresh-btn {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  min-width: 140px;
+  color: #F5F7FB;
+  cursor: pointer;
+  background-color: #1B263B;
+  border: 1px solid #E0E1DD;
+  border-radius: 4px;
+}
+
+.table-prices .refresh-btn:hover {
+  background-color: #415A77;
 }
 
 .table {
@@ -363,9 +426,9 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  border-bottom: 1px solid #414141;
-  border-top: 1px solid #414141;
-  background-color: #bbbbbb;
+  border-bottom: 1px solid #E0E1DD;
+  border-top: 1px solid #E0E1DD;
+  background-color: #778DA9;
 }
 
 .coin-row {
@@ -380,11 +443,11 @@ textarea {
           align-items: center;
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #E0E1DD;
 }
 
 .coin-row:hover {
-  background-color: #ebebeb;
+  background-color: #778DA9;
 }
 
 .id {
@@ -438,23 +501,6 @@ textarea {
   min-width: 120px;
 }
 
-.card-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card-icon img {
-  width: 40px;
-  height: 40px;
-}
-
 /* ================ Dashboard Cards ===================== */
 .page-container {
   display: -webkit-box;
@@ -490,6 +536,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

@@ -1,6 +1,7 @@
 // variables & functions
 @import "./variables";
 
+
 // base & layout
 @import './base';
 
@@ -12,7 +13,7 @@
 @import './userForm';
 @import './priceCard';
 @import './coinsTable';
-@import './cardDetails';
+// @import './cardDetails';
 
 // utilities (margin, padding, opacity, etc)
 
@@ -26,7 +27,7 @@
 }
 
 .page-container .cards {
-  display: flex; 
+  display: flex;
   flex-flow: wrap;
   justify-content: center;
   width: 100%;
@@ -36,6 +37,7 @@
 .page-container .body {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   justify-content: center;
   align-items: center;
   width: 100%;

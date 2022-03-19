@@ -1,4 +1,11 @@
-
+.table-prices {
+  display: flex;
+  justify-content: space-between;
+  
+  .refresh-btn {
+    @include button;
+  }
+}
 
 .table {
   display: block;
@@ -10,14 +17,11 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid $dark;
-    border-top: 1px solid $dark;
-    background-color: rgb(187, 187, 187);
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    background-color: $color-04;
   }
 }
-
-// .grow { transition: all .2s ease-in-out; }
-// .grow:hover { transform: scale(1.1); }
 
 .coin-row {
   display: flex;
@@ -25,10 +29,10 @@
   align-items: center;
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid $dark;
+  border-bottom: 1px solid $border-color;
 
   &:hover {
-    background-color: $light-gray;
+    background-color: $color-04;
   }
 }
 

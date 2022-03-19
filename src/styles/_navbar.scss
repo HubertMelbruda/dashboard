@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border-bottom: $border-thickness solid $dark;
-
+  border-bottom: $border-thickness solid $border-color;
+  
   a {
     display: flex;
     justify-content: center;
@@ -11,10 +11,14 @@
     font-weight: 500;
     padding: 10px;
     margin: 10px;
-    color: $font-color-dark;
-    background-color: $secondary;
-    border: $border-thickness solid $dark;
+    color: $font-color-light;
+    background-color: $color-02;
+    border: $border-thickness solid $border-color;
     border-radius: $border-radius;
+
+    &:hover {
+      background-color: $color-03;
+    }
   }
 }
 

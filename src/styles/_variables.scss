@@ -1,13 +1,15 @@
 // Colors 
-// $primary: #F5F7FB;
-$primary: #F5F7FB;
-$secondary: #FFFFFF;
-$dark: #414141;
-$light-gray:  #ebebeb;
+$color-01: #0D1B2A;
+$color-02: #1B263B;
+$color-03: #415A77;
+$color-04: #778DA9;
+$color-05: #E0E1DD;
+$border-color: #E0E1DD;
+
 
 //Font color 
 $font-color-light: #F5F7FB;
-$font-color-dark: #414141;
+$font-color-dark: #1B263B;
 
 // Font size
 $font-s: 10px;
@@ -29,6 +31,24 @@ $margin-xl: 20px;
 // Border
 $border-thickness: 1px;
 $border-radius: 4px;
+
+//Button
+@mixin button {
+  font-size: $font-m;
+    font-weight: 500;
+    padding: 10px;
+    min-width: 140px;
+    color: $font-color-light;
+    cursor: pointer;
+    background-color: $color-02;
+    border: $border-thickness solid $border-color;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $color-03;
+    }
+}
+
 
 // element position 
 @mixin centerElement{

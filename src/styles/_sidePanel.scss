@@ -1,5 +1,5 @@
 .side-panel {
-  background-image: url('../assets/img/user-background-03.jpg');
+  background-image: url("../assets/img/user-background-03.jpg");
   // background-position: center;
   background-position: right 35% bottom 55%;
   
@@ -11,7 +11,7 @@
     padding: 13px 15px;
     color: $font-color-light;
     font-size: $font-l;
-    border-bottom: $border-thickness solid $primary;
+    border-bottom: $border-thickness solid $color-01;
 
     img {
       max-width: 50px;
@@ -33,6 +33,10 @@
     padding: 10px 15px;
     margin: 0 15px;
     border-radius: $border-radius;
+    
+    &:hover {
+      background-color: $color-03;
+    }
 
     a {
       margin-left: 10px;

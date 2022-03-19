@@ -2,15 +2,16 @@
   display: flex;
   flex-flow: column wrap;
   margin: 10px;
-  background-color: $secondary;
+  background-color: $color-02;
   border-radius: $border-radius;
-  border: $border-thickness solid $dark;
+  border: $border-thickness solid $border-color;
+  color: $font-color-light;
 
   .card-header {
-    display: inline-block;
+    display: flex;
     padding: 5px;
     margin: 0 10px;
-    border-bottom: $border-thickness solid $dark;
+    border-bottom: $border-thickness solid $border-color;
     font-size: $font-xl;
     font-weight: 400;
   }
@@ -24,7 +25,7 @@
     @include centerElement;
     padding: 5px;
     margin: 0 10px;
-    border-top: $border-thickness solid $dark;
+    border-top: $border-thickness solid $border-color;
   }
 }
 

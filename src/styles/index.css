@@ -80,7 +80,8 @@ a {
 }
 
 .side-panel {
-  background-color: #444444;
+  background-image: url("../assets/img/user-background-03.jpg");
+  background-position: right 35% bottom 55%;
   width: 260px;
 }
 
@@ -162,14 +163,14 @@ a {
   margin: 10px;
   background-color: #FFFFFF;
   border-radius: 4px;
-  border: 1px solid #444444;
+  border: 1px solid #414141;
 }
 
 .card .card-header {
   display: inline-block;
   padding: 5px;
   margin: 0 10px;
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #414141;
   font-size: 30px;
   font-weight: 400;
 }
@@ -199,7 +200,7 @@ a {
           align-items: center;
   padding: 5px;
   margin: 0 10px;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #414141;
 }
 
 /* ================ User Card  ===================== */
@@ -257,7 +258,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #414141;
 }
 
 .nav-bar a {
@@ -271,9 +272,9 @@ a {
   font-weight: 500;
   padding: 10px;
   margin: 10px;
-  color: #444444;
+  color: #414141;
   background-color: #FFFFFF;
-  border: 1px solid #444444;
+  border: 1px solid #414141;
   border-radius: 4px;
 }
 
@@ -291,7 +292,7 @@ form label {
   display: inline-block;
   font-size: 20px;
   font-weight: 400;
-  color: #5d5d5d;
+  color: #414141;
   padding-bottom: 5px;
 }
 
@@ -345,15 +346,113 @@ textarea {
   width: 500px;
 }
 
-.table-head {
+.table {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+}
+
+.table .table-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  border-bottom: 1px solid #414141;
+  border-top: 1px solid #414141;
+  background-color: #bbbbbb;
 }
 
-.table-head div {
+.coin-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #414141;
+}
+
+.coin-row:hover {
+  background-color: #ebebeb;
+}
+
+.id {
   padding: 10px;
+  min-width: 50px;
+}
+
+.coin-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+  min-width: 170px;
+  font-weight: 800;
+}
+
+.coin-name img {
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.price {
+  padding: 10px;
+  min-width: 130px;
+}
+
+.percentage-24h {
+  padding: 10px;
+  min-width: 120px;
+}
+
+.volume-24h {
+  padding: 10px;
+  min-width: 160px;
+}
+
+.market-cap {
+  padding: 10px;
+  min-width: 160px;
+}
+
+.ath {
+  padding: 10px;
+  min-width: 120px;
+}
+
+.card-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-icon img {
+  width: 40px;
+  height: 40px;
 }
 
 /* ================ Dashboard Cards ===================== */
@@ -396,117 +495,5 @@ textarea {
           align-items: center;
   width: 100%;
   margin: 5px;
-}
-
-.table {
-  display: block;
-  width: 100%;
-}
-
-.table .table-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  border-bottom: 1px solid #444444;
-  border-top: 1px solid #444444;
-  background-color: #bbbbbb;
-}
-
-.table .table-head .id {
-  padding: 10px;
-  min-width: 50px;
-}
-
-.table .table-head .coin-name {
-  padding: 10px;
-  min-width: 170px;
-}
-
-.table .table-head .price {
-  padding: 10px;
-  min-width: 130px;
-}
-
-.table .table-head .percentage-24h {
-  padding: 10px;
-  min-width: 120px;
-}
-
-.table .table-head .volume-24h {
-  padding: 10px;
-  min-width: 120px;
-}
-
-.table .table-head .market-cap {
-  padding: 10px;
-  min-width: 120px;
-}
-
-.coin-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid #444444;
-}
-
-.coin-row .id {
-  padding: 10px;
-  min-width: 50px;
-}
-
-.coin-row .coin-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 10px;
-  min-width: 170px;
-  font-weight: 800;
-}
-
-.coin-row .coin-name img {
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
-}
-
-.coin-row .price {
-  padding: 10px;
-  min-width: 130px;
-}
-
-.coin-row .percentage-24h {
-  padding: 10px;
-  min-width: 120px;
-}
-
-.coin-row .volume-24h {
-  padding: 10px;
-  min-width: 120px;
-}
-
-.coin-row .market-cap {
-  padding: 10px;
-  min-width: 120px;
 }
 /*# sourceMappingURL=index.css.map */

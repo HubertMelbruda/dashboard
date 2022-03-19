@@ -15,6 +15,7 @@ function App() {
           <Navbar />
           <div className="content">
             <Routes>
+              <Route exact path="/" element={<Dashboard />} />
               <Route exact path="/dashboard" element={<Dashboard />} />
               <Route path="/user-profile" element={<UserProfile />} />
               <Route path="/portfolio" element={<Portfolio />} />

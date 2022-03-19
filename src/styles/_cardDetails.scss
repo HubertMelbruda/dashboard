@@ -1,0 +1,8 @@
+.card-icon {
+  @include centerElement;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}

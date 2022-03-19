@@ -1,11 +1,15 @@
 .side-panel {
-  background-color: $dark;
+  background-image: url('../assets/img/user-background-03.jpg');
+  // background-position: center;
+  background-position: right 35% bottom 55%;
+  
+
   width: 260px;
 
   .logo {
     @include centerElement;
     padding: 13px 15px;
-    color: $primary;
+    color: $font-color-light;
     font-size: $font-l;
     border-bottom: $border-thickness solid $primary;
 
@@ -32,7 +36,7 @@
 
     a {
       margin-left: 10px;
-      color: $primary;
+      color: $font-color-light;
       font-size: $font-l;
       font-weight: 400;
     }
@@ -40,7 +44,7 @@
      .navIcon {
       width: 25px;
       height: 25px;
-      color: $primary;
+      color: $font-color-light;
     }
   }
 

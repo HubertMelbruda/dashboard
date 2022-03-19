@@ -1,0 +1,56 @@
+//import google font 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+// reset styles
+* { 
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 10px;
+}
+
+.col-100 {
+  flex: 0 0 100%;
+}
+
+.col-66 {
+  flex: 0 0 66,66%;
+}
+
+.col-33 {
+  flex: 0 0 33,33%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px; 
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.mainPanel {
+  display: flex;
+  flex-flow: column ;
+  flex-grow: 1;
+  background-color: $color-01;
+}
+

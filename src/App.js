@@ -1,23 +1,25 @@
 import { BrowserRouter as React, Routes, Route } from "react-router-dom";
-import "./App.css";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import SidePanel from "./components/SidePanel";
 import Dashboard from "./pages/Dashboard";
 import UserProfile from "./pages/UserProfile";
+import Portfolio from "./pages/Portfolio";
+import Prices from "./pages/Prices";
 
 function App() {
   return (
     <React>
       <div className="App">
-        <div className="side-bar">
-          <Sidebar />
-        </div>
+        <SidePanel />
         <div className="mainPanel">
           <Navbar />
           <div className="content">
             <Routes>
+              <Route exact path="/" element={<Dashboard />} />
               <Route exact path="/dashboard" element={<Dashboard />} />
               <Route path="/user-profile" element={<UserProfile />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/prices" element={<Prices />} />
             </Routes>
           </div>
         </div>

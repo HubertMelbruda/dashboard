@@ -1,0 +1,69 @@
+// Colors 
+$color-01: #0D1B2A;
+$color-02: #1B263B;
+$color-03: #415A77;
+$color-04: #778DA9;
+$color-05: #E0E1DD;
+$border-color: #E0E1DD;
+
+
+//Font color 
+$font-color-light: #F5F7FB;
+$font-color-dark: #1B263B;
+
+// Font size
+$font-s: 10px;
+$font-m: 15px;
+$font-l: 20px;
+$font-xl: 30px;
+
+// Spacing
+$padding-s: 5px;
+$padding-m: 10px;
+$padding-l: 15px;
+$padding-xl: 20px;
+
+$margin-s: 5px;
+$margin-m: 10px;
+$margin-l: 15px;
+$margin-xl: 20px;
+
+// Border
+$border-thickness: 1px;
+$border-radius: 4px;
+
+//Button
+@mixin button {
+  font-size: $font-m;
+    font-weight: 500;
+    padding: 10px;
+    min-width: 140px;
+    color: $font-color-light;
+    cursor: pointer;
+    background-color: $color-02;
+    border: $border-thickness solid $border-color;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $color-03;
+    }
+}
+
+
+// element position 
+@mixin centerElement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerElementColumn($direction){
+  display: flex;
+  flex-direction: $direction;
+  
+  @if($direction == column) {
+    align-items: center;
+  } @else {
+    justify-content: center;
+  }
+}

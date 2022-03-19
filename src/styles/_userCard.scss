@@ -1,0 +1,39 @@
+/* ================ User Card  ===================== */
+.card-img {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: 50%;   
+  left: 50%; 
+  transform: translate(-50%, -0%);
+
+  img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid $color-05;
+    border-radius: 40px;
+  }
+}
+
+.user-data {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 90px;
+  max-width: 350px;
+
+  p {
+    text-align: center;
+    padding: 10px;
+    font-size: $font-m;
+  }
+}
+

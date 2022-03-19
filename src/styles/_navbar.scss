@@ -1,0 +1,29 @@
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: $border-thickness solid $border-color;
+  
+  a {
+    display: flex;
+    justify-content: center;
+    font-size: $font-m;
+    font-weight: 500;
+    padding: 10px;
+    margin: 10px;
+    color: $font-color-light;
+    background-color: $color-02;
+    border: $border-thickness solid $border-color;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $color-03;
+    }
+  }
+}
+
+.nav-bar-left {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+}

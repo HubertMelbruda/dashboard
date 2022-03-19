@@ -4,21 +4,22 @@ import {
   FaBuromobelexperte,
   FaHouseUser,
   FaBtc,
-  FaYammer,
+  FaChartBar,
   FaDeviantart,
   FaMapMarkedAlt,
   FaRegStickyNote,
 } from "react-icons/fa";
 
 const Sidebar = () => {
+
   const navLabels = [
     { id: 1, name: "Dashboard", path: "dashboard", icon: [FaBuromobelexperte] },
     { id: 2, name: "User Profile", path: "user-profile", icon: [FaHouseUser] },
     { id: 3, name: "Portfolio", path: "portfolio", icon: [FaBtc] },
-    { id: 4, name: "News", path: "news", icon: [FaYammer] },
-    { id: 5, name: "Assets", path: "assets", icon: [FaDeviantart] },
+    { id: 4, name: "Prices", path: "prices", icon: [FaChartBar] },
+    { id: 5, name: "Exchange", path: "exchange", icon: [FaDeviantart] },
     { id: 6, name: "Calender", path: "calender", icon: [FaMapMarkedAlt] },
-    { id: 7, name: "Notifications", path: "notifications", icon: [FaRegStickyNote] },
+    { id: 7, name: "Notes", path: "notifications", icon: [FaRegStickyNote] },
   ];
 
   const navList = navLabels.map(label => {
@@ -34,7 +35,7 @@ const Sidebar = () => {
   });
 
   return (
-    <div className="sidebar">
+    <div className="side-panel">
       <div className="logo">
         <img src={reactLogo} alt="Logo" /> USER DASHBOARD
       </div>

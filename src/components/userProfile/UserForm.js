@@ -1,4 +1,44 @@
+import { useState } from "react";
+
 const UserForm = () => {
+  const [form, setForm] = useState({
+    userName: "",
+    emailAddress: "",
+    firstName: "",
+    lastName: "",
+    address: "",
+    password: "",
+    passwordRep: "",
+    aboutMe: "",
+  });
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(form);
+
+    //   fetch("http://localhost:8000/users/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(form),
+    //   }).then(() => {});
+    // };
+
+    // npx json-server --watch data/db.json --port 8000
+
+    fetch("public/db.json/users/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    }).then(() => {});
+  };
+
+  const updateField = e => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div className="column col-66 grow">
       <div className="card">
@@ -6,7 +46,7 @@ const UserForm = () => {
           <p>Edit Profile</p>
         </div>
         <div className="card-body">
-          <form>
+          <form onSubmit={handleSubmit} className="grow">
             <div className="row">
               <div className="column grow">
                 <label htmlFor="userName">User Name</label>
@@ -16,6 +56,7 @@ const UserForm = () => {
                   id="userName"
                   required
                   placeholder="Luck Skywalker"
+                  onChange={updateField}
                 />
               </div>
               <div className="column grow">
@@ -26,6 +67,7 @@ const UserForm = () => {
                   id="emailAddress"
                   required
                   placeholder="e.g. skywalker@gmail.com"
+                  onChange={updateField}
                 />
               </div>
             </div>
@@ -38,6 +80,7 @@ const UserForm = () => {
                   id="firstName"
                   required
                   placeholder="Jon"
+                  onChange={updateField}
                 />
               </div>
               <div className="column grow">
@@ -48,6 +91,7 @@ const UserForm = () => {
                   id="lastname"
                   required
                   placeholder="Doe"
+                  onChange={updateField}
                 />
               </div>
             </div>
@@ -61,43 +105,35 @@ const UserForm = () => {
                   id="address"
                   required
                   placeholder="Address..."
+                  onChange={updateField}
                 />
               </div>
             </div>
 
             <div className="row">
               <div className="column grow">
-                <label htmlFor="city">City</label>
+                <label htmlFor="city">Password</label>
                 <input
                   type="text"
-                  name="city"
+                  name="password"
                   id="city"
                   required
-                  placeholder="Tatooine"
+                  placeholder="******"
+                  onChange={updateField}
                 />
               </div>
               <div className="column grow">
-                <label htmlFor="country">Country</label>
+                <label htmlFor="country">Password Rep.</label>
                 <input
                   type="text"
-                  name="country"
+                  name="passwordRep"
                   id="country"
                   required
-                  placeholder="Polis Massa"
-                />
-              </div>
-              <div className="column grow">
-                <label htmlFor="postCode">Post Code</label>
-                <input
-                  type="text"
-                  name="postCode"
-                  id="postCode"
-                  required
-                  placeholder="00-007"
+                  placeholder="******"
+                  onChange={updateField}
                 />
               </div>
             </div>
-
             <div className="row">
               <div className="column grow">
                 <label htmlFor="aboutMe">About Me</label>
@@ -107,13 +143,14 @@ const UserForm = () => {
                   cols="30"
                   rows="10"
                   placeholder="Write something about yourself..."
+                  onChange={updateField}
                 ></textarea>
               </div>
             </div>
+            <div className="row">
+              <button className="accept-btn">Accept</button>
+            </div>
           </form>
-        </div>
-        <div className="card-footer">
-          <p>Card Stats</p>
         </div>
       </div>
     </div>
